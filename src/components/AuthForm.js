@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function AuthForm({ email, setEmail, password, setPassword }) {
+export default function AuthForm({ email, setEmail, password, setPassword, handleForm }) {
   return (
     <div>
       <form>
@@ -20,6 +20,7 @@ export default function AuthForm({ email, setEmail, password, setPassword }) {
             setPassword(e.target.value);
           }}
         ></input>
+        <button onClick={handleForm}>Sign Up</button>
       </form>
     </div>
   );
