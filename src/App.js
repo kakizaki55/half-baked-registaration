@@ -1,8 +1,7 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter, Route, Switch, NavLink } from 'react-router-dom';
-import SignIn from './views/SignIn.js';
-import SignUp from './views/SignUp.js';
+
 import Auth from './views/Auth.js';
 import { getUser, logout } from './services/users';
 import { useState } from 'react';
@@ -18,10 +17,7 @@ export default function App() {
   return (
     <>
       <BrowserRouter>
-        <header>
-          <NavLink to="/signup">Sign Up </NavLink>
-          <NavLink to="/signin">Sign In </NavLink>
-        </header>
+        <header>home page</header>
         <Switch>
           <Route exact path="/">
             {user ? (
@@ -31,7 +27,7 @@ export default function App() {
               </div>
             ) : (
               <div>
-                <Auth></Auth>
+                <Auth setUser={setUser}></Auth>
               </div>
             )}
           </Route>
