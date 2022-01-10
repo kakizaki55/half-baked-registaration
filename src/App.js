@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter, Route, Switch, NavLink } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Header from './components/Header';
 
-import Auth from './views/Auth.js';
+import Auth from './views/Auth/Auth.js';
 import { getUser, logout } from './services/users';
 import { useState } from 'react';
 
@@ -17,7 +18,7 @@ export default function App() {
   return (
     <>
       <BrowserRouter>
-        <header>home page</header>
+        <Header> </Header>
         <Switch>
           <Route exact path="/">
             {user ? (

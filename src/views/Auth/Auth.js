@@ -1,7 +1,9 @@
 import React from 'react';
-import AuthForm from '../components/AuthForm';
+import AuthForm from '../../components/AuthForm';
 import { useState } from 'react';
-import { signInUser, signUpUser } from '../services/users';
+import { signInUser, signUpUser } from '../../services/users';
+import classNames from 'classnames';
+import './Auth.css';
 
 export default function SignUp({ setUser }) {
   const [email, setEmail] = useState('');
@@ -24,6 +26,16 @@ export default function SignUp({ setUser }) {
 
   return (
     <div>
+      <div>
+        <h5 onClick={() => setType('signup')} className={classNames({ active: type === 'signup' })}>
+          Sign Up
+        </h5>
+      </div>
+      <div>
+        <h5 onClick={() => setType('signin')} className={classNames({ active: type === 'signin' })}>
+          Sign In
+        </h5>
+      </div>
       <h1>Sign In page:</h1>
       <p>{errorMessage}</p>
       <AuthForm
