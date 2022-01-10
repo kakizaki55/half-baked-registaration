@@ -11,7 +11,7 @@ export default function SignUp() {
   const handleForm = async (e) => {
     e.preventDefault();
     try {
-      const data = await signInUser(email, password);
+      await signInUser(email, password);
     } catch {
       setErrorMessage('Oops, looks like something went wrong');
     }
@@ -19,7 +19,7 @@ export default function SignUp() {
 
   return (
     <div>
-      <h1>Sign Up page:</h1>
+      <h1>Sign In page:</h1>
       <p>{errorMessage}</p>
       <AuthForm
         email={email}

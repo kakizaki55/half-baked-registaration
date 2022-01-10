@@ -20,7 +20,7 @@ export default function AuthForm({ email, setEmail, password, setPassword, handl
             setPassword(e.target.value);
           }}
         ></input>
-        <button onClick={handleForm}>Sign Up</button>
+        <button onClick={handleForm}>Sign In</button>
       </form>
     </div>
   );
