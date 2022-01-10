@@ -6,15 +6,21 @@ import { signInUser } from '../services/users';
 export default function SignUp() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+
   const handleForm = async (e) => {
     e.preventDefault();
-    const data = await signInUser(email, password);
-    console.log(data);
+    try {
+      const data = await signInUser(email, password);
+    } catch {
+      setErrorMessage('Oops, looks like something went wrong');
+    }
   };
 
   return (
     <div>
       <h1>Sign Up page:</h1>
+      <p>{errorMessage}</p>
       <AuthForm
         email={email}
         setEmail={setEmail}
