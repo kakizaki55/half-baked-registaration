@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css';
 import { BrowserRouter, Route, Switch, NavLink } from 'react-router-dom';
 import SignIn from './veiws/SignIn.js';
 import SignUp from './veiws/SignUp.js';
