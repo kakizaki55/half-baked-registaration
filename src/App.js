@@ -23,7 +23,15 @@ export default function App() {
           <Route exact path="/">
             {user ? (
               <div>
-                <h1>this is me signed in</h1>
+                <h1>congrats me!</h1>
+                <iframe
+                  src="https://giphy.com/embed/14cDsqOkks6O8U"
+                  width="480"
+                  height="480"
+                  frameBorder="0"
+                  className="giphy-embed"
+                ></iframe>
+
                 <button onClick={logoutUser}>logout</button>
               </div>
             ) : (
